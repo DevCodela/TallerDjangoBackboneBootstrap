@@ -5,8 +5,8 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from .models import Book, Favourite
-from .serializers import BookSerializer, FavouriteSerializer
+from .models import Book, Favourite, Comment
+from .serializers import BookSerializer, FavouriteSerializer, CommentSerializer
 
 
 class BookViewSet(viewsets.ReadOnlyModelViewSet):
@@ -40,3 +40,11 @@ class FavouriteViewSet(viewsets.ModelViewSet):
 					book = get_object_or_404(Book, pk = request.POST['book'])
 				)
 		return Response(status = status.HTTP_201_CREATED)
+
+class CommentViewSet(viewsets.ModelViewSet):
+
+	queryset = Comment.objects.all()
+	serializer_class = CommentSerializer
+
+	def get_queryset(self):
+		return self.queryset.filter(book__pk = self.kwargs['book_pk'])
