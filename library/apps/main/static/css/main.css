@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+/* Layout */
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+/* Cabecera */
+.cabecera {
+  background-color: #3fbfc2;
+  color: #fff;
+  height: 50px;
+  text-align: center;
+}
+
+.logo {
+  line-height: 50px;
+}
+
+
+/* Footer */
+.footer {
+  color: #b8b8b8;
+}
+
+.footer__linea {
+  border: none;
+  border-top: 1px solid;
+  border-color: #b8b8b8;
+}
+
+.footer__texto {
+  font-size: 14px;
+}
+
+
+/* Principal */
+
+.principal {
+  margin: 3em 0;
+}
+
+.principal__titulo {
+  display: inline-block;
+}
+
+.principal__subtitulo {
+  color: #969393;
+}
+
+.tabs {
+  border-bottom: 1px solid #b8b8b8;
+}
+
+.tab__item {
+  color: #b8b8b8;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: -1px;
+  padding: 7.5px 15px;
+  text-transform: uppercase;
+}
+
+.tab__item--activo {
+  border: 1px solid #b8b8b8;
+  border-bottom: 1px solid #fff;
+  border-radius: 2px 2px 0 0;
+  color: #555555;
+}
+
+.libros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.libro {
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  width: 24%;
+  margin-top: 1em;
+}
+
+.libro:hover .libro__img {
+  transform: scale(1.1);
+}
+
+.libro__img {
+  transition-duration: 1s;
+  width: 100%;
+}
+
+.libro__sombra {
+  background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 2em 1em;
+}
+
+.libro__autor {
+  color: #b8b8b8;
+}
+
+
+/* Detalle */
+
+.detalle {
+  margin: 3em 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.detalle__img {
+  flex-shrink: 0;
+  margin-right: 2em;
+  width: 180px;
+}
+
+.detalle__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detalle__autor_img {
+  border-radius: 50%;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+}
+
+.detaller__autor_nombre {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.detalle__favoritos {
+  flex-shrink: 0;
+  margin-left: 2em;
+  text-align: center;
+  width: 180px;
+}
+
+.detalle__favoritos_numero {
+  font-size: 50px;
+}
+
+.detalle__favoritos_boton {
+  background-color: #ffd61f;
+  padding: .5em 1em;
+}
+
+
+.comentarios {
+  margin: 1em 0;
+}
+
+.comentarios__cabecera {
+  border-bottom: 1px solid #b8b8b8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.comentario {
+  display: flex;
+  margin: 2em 0;
+}
+
+.comentario__img {
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 1em;
+  height: 40px;
+  width: 40px;
+}
+
+.comentario__autor {
+  display: inline-block;
+  margin: .25em;
+}
+
+.comentario__tiempo {
+  color: #b8b8b8;
+  font-size: .8em;
+}
+
+
+.comentario__input {
+  font-size: 15px;
+  padding: 1em;
+  width: 100%;
+}
+
+.comentario__boton {
+  background-color: #3fbfc2;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 15px;
+  margin-top: 1em;
+  padding: .5em 1em;
+}

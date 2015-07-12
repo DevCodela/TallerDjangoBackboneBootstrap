@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import FormView
+from django.views.generic import FormView, TemplateView
 from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth import authenticate, login
 
@@ -19,3 +19,7 @@ class HomeView(FormView):
 		if user is not None:
 			login(self.request, user)
 			return super(HomeView, self).form_valid(form)
+
+class DetalleView(TemplateView):
+
+	template_name = "detalle.html"

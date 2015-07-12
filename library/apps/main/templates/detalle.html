@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% load static from staticfiles %}
+
+{% block body %}
+  <div class="contenedor">
+
+    <article class="detalle">
+
+      <img src="{% static 'img/eloquent-js.png' %}" alt="" class="detalle__img">
+
+      <section class="detalle__cuerpo">
+
+        <div class="detalle__info">
+
+          <div class="detalle__texto">
+
+            <h1 class="detalle__titulo">Eloquent Javascript</h1>
+            <div class="detalle_autor">
+              <img src="{% static 'img/profesor.png' %}" alt="" class="detalle__autor_img">
+              <span class="detaller__autor_nombre">Marijn Haverbeke</span>
+            </div>
+            <p class="detalle__descripcion">This is a book about JavaScript, programming, and the wonders of the digital. You can read it online here, or get your own paperback copy of the book.</p>
+          </div>
+
+          <div class="detalle__favoritos">
+            <div class="detalle__favoritos_cantidad">
+              <span class="detalle__favoritos_numero">3</span>
+              <span>favoritos</span>
+            </div>
+            <div class="detalle__favoritos_boton"><span class="icon-star-empty"> </span>Dar favorito</div>
+          </div>
+
+        </div>
+
+        <section class="comentarios">
+
+          <header class="comentarios__cabecera">
+            <h3 class="comentarios__titulo">Comentarios</h3>
+            <span class="icon-bubbles2 comentarios__cantidad"> 2</span>
+          </header>
+
+          <div class="comentario">
+
+            <img src="{% static 'img/usuario.jpeg' %}" alt="" class="comentario__img">
+
+            <div class="comentario__texto">
+
+              <h4 class="comentario__autor">Karen de Graaf</h4>
+              <span class="comentario__tiempo">hace 3 minutos</span>
+              <p class="comentario__descripcion">This is a book about JavaScript, programming, and the wonders of the digital. You can read it online.</p>
+
+            </div>
+
+          </div>
+
+          <form action="" class="comentario__form">
+
+            <input type="text" class="comentario__input" placeholder="Escribe un comentario ...">
+
+            <button class="comentario__boton">Dejar comentario</button>
+
+          </form>
+
+        </section>
+
+      </section>
+
+    </article>
+
+  </div>
+{% endblock %}

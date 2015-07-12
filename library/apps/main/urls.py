@@ -2,7 +2,7 @@ from django.conf.urls import include, url
 
 from rest_framework_nested import routers
 
-from .views import HomeView
+from .views import HomeView, DetalleView
 from .viewsets import BookViewSet, FavouriteViewSet, CommentViewSet
 
 router = routers.SimpleRouter()
@@ -17,4 +17,5 @@ urlpatterns = [
 	url(r'^api/', include(router.urls)),
 	url(r'^api/', include(comments_router.urls)),
 	url(r'^$', HomeView.as_view(), name="home"),
+	url(r'^detalle/$', DetalleView.as_view(), name="detalle"),
 ]

@@ -1,21 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	{% if user.is_authenticated %}
-		<h1>Holaaa {{ user.username }}</h1>
-	{% else %}
-		<form method="POST">
-			{% csrf_token %}
-			{{ form.username }}
-			{{ form.username.errors }}
-			{{ form.password }}
-			{{ form.password.errors }}
-			<input type="submit" value="Ingresar">
-		</form>
-	{% endif %}
-</body>
-</html>
+{% extends "base.html" %}
+
+{% load static from staticfiles %}
+
+{% block body %}
+
+<section class="principal">
+
+	<div class="contenedor">
+
+		<h1 class="principal__titulo">Librería</h1>
+		<span class="principal__subtitulo">Encuentra los mejores libros que deseas.</span>
+
+		<ul class="tabs">
+			<li class="tab__item tab__item--activo">Todos</li>
+			<li class="tab__item">Favoritos</li>
+		</ul>
+
+		<div class="libros">
+
+			<article class="libro">
+
+				<img src="{% static 'img/eloquent-js.png' %}" alt="" class="libro__img">
+				<div class="libro__sombra">
+
+					<h3 class="libro__titulo">Eloquent Javascript</h3>
+					<span class="libro__autor">Marijn Haverbeke</span>
+
+				</div>
+
+			</article>
+
+			<article class="libro">
+
+				<img src="{% static 'img/eloquent-js.png' %}" alt="" class="libro__img">
+				<div class="libro__sombra">
+
+					<h3 class="libro__titulo">Eloquent Javascript</h3>
+					<span class="libro__autor">Marijn Haverbeke</span>
+
+				</div>
+
+			</article>
+
+			<article class="libro">
+
+				<img src="{% static 'img/eloquent-js.png' %}" alt="" class="libro__img">
+				<div class="libro__sombra">
+
+					<h3 class="libro__titulo">Eloquent Javascript</h3>
+					<span class="libro__autor">Marijn Haverbeke</span>
+
+				</div>
+
+			</article>
+
+			<article class="libro">
+
+				<img src="{% static 'img/eloquent-js.png' %}" alt="" class="libro__img">
+				<div class="libro__sombra">
+
+					<h3 class="libro__titulo">Eloquent Javascript</h3>
+					<span class="libro__autor">Marijn Haverbeke</span>
+
+				</div>
+
+			</article>
+
+			<article class="libro">
+
+				<img src="{% static 'img/eloquent-js.png' %}" alt="" class="libro__img">
+				<div class="libro__sombra">
+
+					<h3 class="libro__titulo">Eloquent Javascript</h3>
+					<span class="libro__autor">Marijn Haverbeke</span>
+
+				</div>
+
+			</article>
+
+			<article class="libro">
+
+				<img src="{% static 'img/eloquent-js.png' %}" alt="" class="libro__img">
+				<div class="libro__sombra">
+
+					<h3 class="libro__titulo">Eloquent Javascript</h3>
+					<span class="libro__autor">Marijn Haverbeke</span>
+
+				</div>
+
+			</article>
+
+		</div>
+
+	</div>
+
+</section>
+
+{% endblock %}
+
+{#
+
+{% if user.is_authenticated %}
+	<h1>Holaaa {{ user.username }}</h1>
+{% else %}
+	<form method="POST">
+		{% csrf_token %}
+		{{ form.username }}
+		{{ form.username.errors }}
+		{{ form.password }}
+		{{ form.password.errors }}
+		<input type="submit" value="Ingresar">
+	</form>
+{% endif %}
+
+#}
